@@ -15,7 +15,7 @@ $users = $stmt->fetchAll();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dolphin CRM - Users</title>
-    <link rel="stylesheet" href="add_user.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
     <header class="top-bar">
@@ -23,7 +23,6 @@ $users = $stmt->fetchAll();
             <img src="assets/dolphin.svg" alt="Dolphin CRM" class="brand-logo">
             <div>
                 <span class="brand-title">Dolphin CRM</span>
-                <span class="brand-caption">Admin Panel</span>
             </div>
         </div>
     </header>
@@ -34,18 +33,15 @@ $users = $stmt->fetchAll();
         </aside>
 
         <main class="page-shell">
-            <div class="panel panel-compact">
-                <div class="panel-heading">
-                    <div>
-                        <h1>Users</h1>
-                        <p>Only admins can see and manage the full list of accounts.</p>
-                    </div>
-                    <a href="add_user.php" class="action-btn">+ Add User</a>
-                </div>
+            <div class="dashboard-hero">
+                <h1>Users</h1>
+                <a href="add_user.php" class="action-btn">+ Add User</a>
+            </div>
 
+            <div class="panel panel-compact">
                 <section class="panel-body">
                     <div class="table-wrapper">
-                        <table class="users-table">
+                        <table class="contacts-table">
                             <thead>
                                 <tr>
                                     <th>Name</th>

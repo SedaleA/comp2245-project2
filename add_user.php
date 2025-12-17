@@ -94,7 +94,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <img src="assets/dolphin.svg" alt="Dolphin CRM" class="brand-logo">
             <div>
                 <span class="brand-title">Dolphin CRM</span>
-                <span class="brand-caption">Admin Panel</span>
             </div>
         </div>
     </header>
@@ -105,12 +104,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </aside>
 
         <main class="page-shell">
-            <div class="panel panel-compact">
-                <div class="panel-heading">
-                    <h1>New User</h1>
-                    <p>Only administrators can create accounts. Passwords must meet the policy.</p>
-                </div>
+            <div class="form-hero">
+                <h1>New User</h1>
+            </div>
 
+            <div class="panel panel-compact">
                 <section class="panel-body">
                 <?php if (!empty($errors)): ?>
                     <div class="alert alert-error" aria-live="polite">
@@ -181,10 +179,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <button type="submit" class="submit-btn">Save</button>
                     </div>
                 </form>
-            </section>
-        </div>
-    </main>
-</div>
+                </section>
+            </div>
+        </main>
+    </div>
 </body>
 </html>
-

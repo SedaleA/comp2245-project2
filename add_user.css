@@ -9,10 +9,9 @@
 /* Base */
 
 body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
-    sans-serif;
-  background-color: #ebecf9;
-  color: #111827;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #f3f4fb;
+    color: #111827;
 }
 
 /* Top bar */
@@ -45,11 +44,6 @@ body {
   font-weight: 600;
 }
 
-.brand-caption {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
-}
-
 /* Layout: sidebar + main content */
 
 .layout {
@@ -60,22 +54,24 @@ body {
 /* Sidebar from renderAdminSidebar() */
 
 .sidebar {
-  width: 220px;
-  background-color: #ffffff;
-  border-right: 1px solid #e5e7eb;
-  padding: 24px 16px;
-  font-size: 14px;
+    width: 220px;
+    background-color: #ffffff;
+    border-right: 1px solid #e5e7eb;
+    padding: 24px 16px;
+    font-size: 14px;
+    font-family: inherit;
 }
 
 .sidebar a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 9px 10px;
-  border-radius: 6px;
-  color: #111827;
-  text-decoration: none;
-  transition: background 0.15s ease;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background 0.15s ease, color 0.15s ease;
 }
 
 .sidebar a + a {
@@ -94,52 +90,61 @@ body {
 }
 
 .sidebar .nav-icon {
-  width: 20px;
-  height: 20px;
-  border-radius: 50%;
-  border: 1px solid #9ca3af;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 11px;
-  color: #6b7280;
+    width: 24px;
+    height: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #111827;
 }
 
 .sidebar .nav-icon svg {
-  width: 16px;
-  height: 16px;
-  fill: #111827;
+    width: 22px;
+    height: 22px;
+    display: block;
 }
 
 /* Main content area */
 
 .page-shell {
-  flex: 1;
-  padding: 32px 40px;
+    flex: 1;
+    padding: 32px 48px;
+}
+
+.form-hero {
+    margin: 8px auto 20px;
+    max-width: 960px;
+}
+
+.form-hero h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #111827;
 }
 
 /* Panel (white card) */
 
 .panel {
-  background-color: #ffffff;
-  border-radius: 6px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
-  padding: 24px 24px 28px;
-  max-width: 1100px;
-  margin: 0 auto;
+    background-color: #ffffff;
+    border-radius: 10px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.05);
+    padding: 0;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .panel-compact {
-  padding: 24px;
+    padding: 0;
 }
 
 .panel-heading {
-  margin-bottom: 12px;
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-  gap: 12px;
+    padding: 28px 28px 0;
+    margin-bottom: 12px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 12px;
 }
 
 .panel-heading h1 {
@@ -154,9 +159,10 @@ body {
 }
 
 .panel-body {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
+    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
 }
 
 /* Filters */
@@ -291,65 +297,72 @@ body {
 }
 
 .form-grid-two {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(220px, 1fr));
-  gap: 16px;
-  margin-bottom: 14px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 16px;
 }
 
 .form-group {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
 .form-label {
-  font-size: 13px;
-  font-weight: 500;
-  color: #4b5563;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1f2937;
 }
 
 .form-input {
-  padding: 9px 11px;
-  border-radius: 4px;
-  border: 1px solid #d1d5db;
-  background-color: #ffffff;
-  font-size: 14px;
+    padding: 11px 14px;
+    border-radius: 6px;
+    border: 1px solid #d5d9e2;
+    background-color: #ffffff;
+    font-size: 15px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .form-input:focus {
-  outline: none;
-  border-color: #6366f1;
-  box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.25);
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.2);
 }
 
 .form-note {
-  font-size: 12px;
-  color: #6b7280;
-  margin-top: 3px;
+    font-size: 12px;
+    color: #6b7280;
+    margin-top: 2px;
 }
 
 /* Save button bottom-right */
 
 .form-actions {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+    margin: 12px -28px -28px;
+    padding: 16px 28px;
+    background-color: #f7fbff;
+    border-top: 1px solid #e2e8f0;
+    border-radius: 0 0 10px 10px;
 }
 
 .submit-btn {
-  padding: 8px 20px;
-  border-radius: 4px;
-  border: none;
-  background-color: #5b21ff;
-  color: #ffffff;
-  font-size: 14px;
-  font-weight: 500;
-  cursor: pointer;
+    padding: 10px 26px;
+    border-radius: 6px;
+    border: none;
+    background-color: #4f46e5;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.15s ease, transform 0.15s ease;
 }
 
 .submit-btn:hover {
-  background-color: #4b1ad4;
+    background-color: #4338ca;
+    transform: translateY(-1px);
 }
 
 .action-btn {
@@ -397,4 +410,22 @@ body {
   font-size: 15px;
   color: #111827;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .page-shell {
+        padding: 24px;
+    }
+
+    .form-grid-two {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        justify-content: flex-start;
+    }
+
+    .submit-btn {
+        width: 100%;
+    }
 }

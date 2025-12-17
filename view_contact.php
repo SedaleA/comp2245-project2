@@ -110,12 +110,12 @@ if ($contactId > 0) {
     <link rel="stylesheet" href="add_user.css">
 </head>
 <body>
-<header class="top-bar">
-    <div class="top-brand">
-        <img src="assets/dolphin.svg" alt="Dolphin CRM" class="brand-logo">
-        <div>
-            <span class="brand-title">Dolphin CRM</span>
-            <span class="brand-caption">Admin Panel</span>
+    <header class="top-bar">
+        <div class="top-brand">
+            <img src="assets/dolphin.svg" alt="Dolphin CRM" class="brand-logo">
+            <div>
+                <span class="brand-title">Dolphin CRM</span>
+            </div>
         </div>
     </div>
 </header>

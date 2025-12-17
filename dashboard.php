@@ -57,7 +57,7 @@ try {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dolphin CRM - Dashboard</title>
-    <link rel="stylesheet" href="add_user.css">
+    <link rel="stylesheet" href="dashboard.css">
 </head>
 <body>
     <header class="top-bar">
@@ -65,7 +65,6 @@ try {
             <img src="assets/dolphin.svg" alt="Dolphin CRM" class="brand-logo">
             <div>
                 <span class="brand-title">Dolphin CRM</span>
-                <span class="brand-caption">Admin Panel</span>
             </div>
         </div>
     </header>
@@ -76,22 +75,26 @@ try {
         </aside>
 
         <main class="page-shell">
-            <div class="panel panel-compact">
-                <div class="panel-heading">
-                    <div>
-                        <h1>Contacts</h1>
-                        <p>Browse all contacts and filter by type or who they are assigned to.</p>
-                    </div>
-                    <a href="add_contact.php" class="action-btn">Add New Contact</a>
-                </div>
+            <div class="dashboard-hero">
+                <h1>Dashboard</h1>
+                <a href="add_contact.php" class="action-btn">+ Add New Contact</a>
+            </div>
 
+            <div class="panel panel-compact">
                 <section class="panel-body">
                     <div class="filters-row">
+                        <span class="filter-icon" aria-hidden="true">
+                            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4 5H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M7 12H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                <path d="M10 19H14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </span>
                         <span class="filter-label">Filter By:</span>
                         <div class="filters">
                             <?php foreach ($filterLabels as $key => $label): ?>
                                 <a
-                                    class="filter-pill<?php echo $filter === $key ? ' active' : ''; ?>"
+                                    class="filter-link<?php echo $filter === $key ? ' active' : ''; ?>"
                                     href="?filter=<?php echo urlencode($key); ?>"
                                 >
                                     <?php echo htmlspecialchars($label, ENT_QUOTES); ?>
